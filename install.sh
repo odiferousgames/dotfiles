@@ -33,7 +33,8 @@ sudo pacman -S \
     docker-compose \
     tmux \
     xcape \
-    zsh
+    zsh \
+    network-manager-applet
 
 sudo pacman -Syu
 
@@ -53,7 +54,8 @@ yay -S ttf-meslo-nerd \
     rofi \
     batsignal \
     lazydocker \
-    spotify 
+    spotify \
+    proton-vpn-gtk-app
 
 yay -Syu
 
