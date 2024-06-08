@@ -10,7 +10,6 @@ sudo pacman -S \
     dmenu \
     firefox \
     xorg \
-    xf86-video \
     xf86-video-amdgpu \
     neovim \
     stow \
@@ -30,7 +29,8 @@ sudo pacman -S \
     ripgrep \
     dunst \
     blueman \
-    docker docker-compose \
+    docker \
+    docker-compose \
     tmux \
     xcape \
     zsh
