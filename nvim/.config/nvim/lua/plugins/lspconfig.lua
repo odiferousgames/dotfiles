@@ -9,6 +9,7 @@ return {
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		lspconfig.lua_ls.setup({ capabilities = capabilities })
+        lspconfig.gdscript.setup({ capabilities = capabilities })
 
 		-- Keybinds
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, {})

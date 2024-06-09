@@ -14,4 +14,5 @@ vim.opt.rtp:prepend(lazypath)
 
 -- lazy.nvim setup
 require("options")
+require("godot")
 require("lazy").setup("plugins")
