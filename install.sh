@@ -34,7 +34,9 @@ sudo pacman -S \
     tmux \
     xcape \
     zsh \
-    network-manager-applet
+    network-manager-applet \
+    autorandr \
+    arandr
 
 sudo pacman -Syu
 
