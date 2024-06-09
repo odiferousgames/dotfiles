@@ -1,1 +1,4 @@
-notify-send -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE"
+#!/bin/bash
+
+dunstify "Display profile: $AUTORANDR_CURRENT_PROFILE"
+
