@@ -7,7 +7,7 @@ return {
 	config = function()
 		-- Config
 		local config = require("telescope.config")
-		local grep_args = { table.unpack(config.values.vimgrep_arguments) }
+		local grep_args = { unpack(config.values.vimgrep_arguments) }
 		table.insert(grep_args, "--hidden")
 		table.insert(grep_args, "--glob")
 		table.insert(grep_args, "!**/.git/*")

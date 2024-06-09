@@ -13,5 +13,6 @@ stow \
     polybar \
     rofi \
     tmux \
-    zsh
+    zsh \
+    autorandr
 
