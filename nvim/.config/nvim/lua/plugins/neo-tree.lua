@@ -7,14 +7,6 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
-		require("neo-tree").setup({
-			window = {
-				mappings = {
-					["e"] = "toggle_node",
-				},
-			},
-		})
-		vim.keymap.set("n", "<leader>m", ":Neotree focus reveal<CR>", {})
-		vim.keymap.set("n", "<leader>tm", ":Neotree toggle<CR>", {})
+		require("neo-tree").setup()
 	end,
 }

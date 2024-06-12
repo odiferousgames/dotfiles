@@ -4,6 +4,5 @@ return {
 	event = "VimEnter",
 	config = function()
 		require("dashboard").setup()
-		vim.keymap.set("n", "<leader>d", ":Dashboard<CR>", {})
 	end,
 }
