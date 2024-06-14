@@ -36,7 +36,9 @@ sudo pacman -S \
     zsh \
     network-manager-applet \
     autorandr \
-    arandr
+    arandr \
+    tlp \
+    tlp-rdw
 
 sudo pacman -Syu
 
@@ -65,5 +67,7 @@ yay -Syu
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 systemctl enable bluetooth.service
 systemctl start bluetooth.service
+systemctl enable tlp.service
+systemctl enable NetworkManager-dispatcher.service
+systemctl mask systemd-rfkill.service systemd-rfkill.socket
 chsh --shell $(which zsh)
-
