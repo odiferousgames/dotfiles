@@ -14,5 +14,5 @@ stow \
     rofi \
     tmux \
     zsh \
-    autorandr
-
+    autorandr \
+    yazi

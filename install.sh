@@ -38,7 +38,12 @@ sudo pacman -S \
     autorandr \
     arandr \
     tlp \
-    tlp-rdw
+    tlp-rdw \
+    yazi \
+    ffmpegthumbnailer \
+    unarchiver \
+    jq \
+    poppler 
 
 sudo pacman -Syu
 
