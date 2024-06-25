@@ -43,7 +43,9 @@ sudo pacman -S \
     ffmpegthumbnailer \
     unarchiver \
     jq \
-    poppler 
+    poppler \
+    libreoffice-fresh \
+    xsel
 
 sudo pacman -Syu
 
