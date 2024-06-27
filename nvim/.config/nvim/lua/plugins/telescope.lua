@@ -3,9 +3,11 @@ return {
 	tag = "0.1.6",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope-live-grep-args.nvim",
 	},
 	config = function()
 		-- Config
+        local telescope = require("telescope")
 		local config = require("telescope.config")
 		local grep_args = { unpack(config.values.vimgrep_arguments) }
 		table.insert(grep_args, "--hidden")
@@ -13,7 +15,7 @@ return {
 		table.insert(grep_args, "!**/.git/*")
 
 		-- Setup
-		require("telescope").setup({
+		telescope.setup({
 			defaults = {
 				vimgrep_arguments = grep_args,
 			},
@@ -29,5 +31,8 @@ return {
 				},
 			},
 		})
+
+        -- Extensions
+        telescope.load_extension("live_grep_args")
 	end,
 }

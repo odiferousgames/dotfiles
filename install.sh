@@ -45,7 +45,8 @@ sudo pacman -S \
     jq \
     poppler \
     libreoffice-fresh \
-    xsel
+    xsel \
+    ctags
 
 sudo pacman -Syu
 

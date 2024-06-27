@@ -36,6 +36,10 @@ return {
 					h = { require("telescope.builtin").help_tags, "Help Tags" },
 					t = { require("telescope.builtin").treesitter, "Treesitter" },
 					c = { ":TodoTelescope<CR>", "TODOs" },
+					["*"] = {
+						require("telescope-live-grep-args.shortcuts").grep_word_under_cursor,
+						"Grep Word Under Cursor",
+					},
 				},
 				u = {
 					name = "Undo-Tree",
@@ -50,9 +54,22 @@ return {
 				},
 				a = {
 					name = "Neogen",
-					a = { ":Neogen", "Annotate" },
+					a = { ":Neogen<cr>", "Annotate" },
 				},
-			},
+				t = {
+					name = "Tagbar",
+					t = { ":TagbarToggle<cr>", "Toggle" },
+				},
+				x = {
+					name = "Trouble",
+					x = { ":Trouble diagnostics toggle<cr>", "Diagnostics" },
+				},
+                g = {
+                    name = "Git",
+                    n = { ":Gitsigns next_hunk<cr>", "Next Hunk" },
+                    p = { ":Gitsigns prev_hunk<cr>", "Previous Hunk" },
+                },
+            },
 		})
 	end,
 }
