@@ -9,11 +9,9 @@ return {
 		local wk = require("which-key")
 		wk.setup()
 		wk.register({
+            ["<A-j>"] = { ":cnext<cr>", "Quick List Next" },
+            ["<A-k>"] = { ":cprev<cr>", "Quick List Previous" },
 			["<leader>"] = {
-				d = {
-					name = "Dashboard",
-					d = { ":Dashboard<cr>", "Show" },
-				},
 				n = {
 					name = "Neo-Tree",
 					n = { ":Neotree focus reveal<CR>", "Reveal & Focus" },
@@ -34,8 +32,12 @@ return {
 					g = { require("telescope.builtin").live_grep, "Live Grep" },
 					b = { require("telescope.builtin").buffers, "Buffers" },
 					h = { require("telescope.builtin").help_tags, "Help Tags" },
-					t = { require("telescope.builtin").treesitter, "Treesitter" },
-					c = { ":TodoTelescope<CR>", "TODOs" },
+					s = { require("telescope.builtin").treesitter, "Treesitter" },
+					t = { ":TodoTelescope<CR>", "TODOs" },
+					v = {
+						require("telescope-live-grep-args.shortcuts").grep_visual_selection,
+						"Grep Visual Selection",
+					},
 					["*"] = {
 						require("telescope-live-grep-args.shortcuts").grep_word_under_cursor,
 						"Grep Word Under Cursor",
@@ -64,12 +66,21 @@ return {
 					name = "Trouble",
 					x = { ":Trouble diagnostics toggle<cr>", "Diagnostics" },
 				},
-                g = {
-                    name = "Git",
-                    n = { ":Gitsigns next_hunk<cr>", "Next Hunk" },
-                    p = { ":Gitsigns prev_hunk<cr>", "Previous Hunk" },
-                },
-            },
+				g = {
+					name = "Git",
+					n = { ":Gitsigns next_hunk<cr>", "Next Hunk" },
+					p = { ":Gitsigns prev_hunk<cr>", "Previous Hunk" },
+					b = { ":BlameToggle<cr>", "Blame Window" },
+				},
+				d = {
+					name = "Oil",
+					d = { ":Oil --float %:p:h<cr>", "Open Current" },
+				},
+				o = {
+					name = "Olympe",
+					o = { ":wa<CR> :!(cd ~/Documents/olympe/composer;npm run data)<CR>", "Local DRAW" },
+				},
+			},
 		})
 	end,
 }
