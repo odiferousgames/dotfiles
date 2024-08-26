@@ -9,7 +9,7 @@ return {
 				theme = "dracula",
 			},
 			sections = {
-				lualine_c = { "grapple", "buffers" },
+				lualine_c = { "grapple", "filename" },
 				lualine_x = { "filetype" },
 				lualine_z = { "selectioncount", "location" },
 			},

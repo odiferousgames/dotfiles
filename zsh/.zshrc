@@ -28,7 +28,6 @@ alias ll='eza --color=always --all --icons=always --long --git'
 alias cd='z'
 alias fd='fdfind'
 alias bat='batcat'
-alias tmux='tmux attach'
 
 # Completions
 autoload -U compinit && compinit
