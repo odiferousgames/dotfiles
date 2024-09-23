@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # Touchpad (Touch + Natural Scroll)
 exec --no-startup-id xinput set-prop 10 298 1
