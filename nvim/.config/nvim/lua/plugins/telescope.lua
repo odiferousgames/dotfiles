@@ -15,6 +15,8 @@ return {
 		table.insert(grep_args, "!**/.git/*")
 		table.insert(grep_args, "--glob")
 		table.insert(grep_args, "!**/node_modules/*")
+		table.insert(grep_args, "--glob")
+		table.insert(grep_args, "!**/versioned_docs/*")
 
 		-- Setup
 		telescope.setup({
@@ -31,6 +33,8 @@ return {
 						"!**/.git/*",
 						"--glob",
 						"!**/node_modules/*",
+						"--glob",
+						"!**/versioned_docs/*",
 					},
 				},
 			},

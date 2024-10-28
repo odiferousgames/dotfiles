@@ -21,6 +21,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+# zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 
 # Aliases
 alias ls='eza --color=always --all --icons=always'
@@ -90,6 +91,16 @@ xmodmap -e "keycode 35 = bracketright exclam bracketright exclam dead_diaeresis 
 xmodmap -e "keycode 48 = braceleft agrave braceleft agrave adiaeresis dead_caron adiaeresis dead_caron braceleft agrave adiaeresis dead_caron"
 xmodmap -e "keycode 51 = braceright dollar braceright dollar dead_tilde dead_breve dead_tilde dead_breve braceright dollar dead_tilde dead_breve"
 xmodmap -e "keycode 49 = at degree at degree notsign notsign notsign notsign at degree notsign notsign"
+
+# Yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # Integrations
 eval "$(fzf --zsh)"
