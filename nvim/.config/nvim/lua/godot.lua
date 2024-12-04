@@ -1,5 +1,6 @@
 if vim.fn.filereadable(vim.fn.getcwd() .. "/project.godot") == 1 then
 	local addr = "./godot.pipe"
+	vim.fn.serverstop(addr)
 	vim.fn.serverstart(addr)
     vim.cmd("set noexpandtab")
 end
