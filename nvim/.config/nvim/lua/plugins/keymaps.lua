@@ -50,25 +50,6 @@ return {
 						"Grep Word Under Cursor",
 					},
 				},
-				u = {
-					name = "Undo-Tree",
-					u = { vim.cmd.UndotreeToggle, "Show" },
-				},
-				m = {
-					name = "Grapple",
-					t = { "<cmd>Grapple toggle<cr>", "Toggle Tag" },
-					m = { "<cmd>Grapple toggle_tags<cr>", "Show" },
-					n = { "<cmd>Grapple cycle_tags next<cr>", "Next" },
-					p = { "<cmd>Grapple cycle_tags prev<cr>", "Previous" },
-				},
-				z = {
-					name = "Zen-Mode",
-					z = { ":ZenMode<cr>", "Toggle" },
-				},
-				a = {
-					name = "Neogen",
-					a = { ":Neogen<cr>", "Annotate" },
-				},
 				g = {
 					name = "Git",
 					n = { ":Gitsigns next_hunk<cr>", "Next Hunk" },

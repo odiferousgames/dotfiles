@@ -40,10 +40,10 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # FZF
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+# --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+# --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -68,7 +68,7 @@ _fzf_comprun() {
 }
 
 # Bat
-export BAT_THEME='Catppuccin Mocha'
+# export BAT_THEME='Catppuccin Mocha'
 
 # History
 HISTSIZE=5000
@@ -84,14 +84,14 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Keyboard Mapping
-setxkbmap -option caps:ctrl_modifier
-xcape -e 'Caps_Lock=Escape'
+# setxkbmap -option caps:ctrl_modifier
+# xcape -e 'Caps_Lock=Escape'
 xmodmap -e "keycode 34 = bracketleft egrave bracketleft egrave udiaeresis dead_abovering udiaeresis"
 xmodmap -e "keycode 35 = bracketright exclam bracketright exclam dead_diaeresis dead_macron dead_diaeresis dead_macron bracketright exclam dead_diaeresis dead_macron"
 xmodmap -e "keycode 48 = braceleft agrave braceleft agrave adiaeresis dead_caron adiaeresis dead_caron braceleft agrave adiaeresis dead_caron"
 xmodmap -e "keycode 51 = braceright dollar braceright dollar dead_tilde dead_breve dead_tilde dead_breve braceright dollar dead_tilde dead_breve"
-xmodmap -e "keycode 49 = at degree at degree notsign notsign notsign notsign at degree notsign notsign"
-
+# xmodmap -e "keycode 49 = at degree at degree notsign notsign notsign notsign at degree notsign notsign"
+#
 # Yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"

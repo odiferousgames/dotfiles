@@ -3,11 +3,13 @@ return {
 	tag = "0.1.6",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope-live-grep-args.nvim",
+		"nvim-telescope/telescope-live-grep-args.nvim",
+		"nvim-telescope/telescope-ui-select.nvim",
+    "debugloop/telescope-undo.nvim",
 	},
 	config = function()
 		-- Config
-        local telescope = require("telescope")
+		local telescope = require("telescope")
 		local config = require("telescope.config")
 		local grep_args = { unpack(config.values.vimgrep_arguments) }
 		table.insert(grep_args, "--hidden")
@@ -38,9 +40,16 @@ return {
 					},
 				},
 			},
+			extensions = {
+				["ui-select"] = {
+					require("telescope.themes").get_dropdown(),
+				},
+			},
 		})
 
-        -- Extensions
-        telescope.load_extension("live_grep_args")
+		-- Extensions
+		telescope.load_extension("live_grep_args")
+		telescope.load_extension("ui-select")
+    require("telescope").load_extension("undo")
 	end,
 }

@@ -4,9 +4,7 @@
 
 # Stow
 stow \
-    bat \
     kitty \
     nvim \
     tmux \
-    zsh \
-    yazi
+    zsh 
