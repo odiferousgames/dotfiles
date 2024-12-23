@@ -1,4 +1,0 @@
-#!/bin/bash
-
-dunstify "Display profile: $AUTORANDR_CURRENT_PROFILE"
-
