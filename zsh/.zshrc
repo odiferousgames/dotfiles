@@ -84,14 +84,14 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Keyboard Mapping
-# setxkbmap -option caps:ctrl_modifier
-# xcape -e 'Caps_Lock=Escape'
+setxkbmap -option caps:ctrl_modifier
+xcape -e 'Caps_Lock=Escape'
 xmodmap -e "keycode 34 = bracketleft egrave bracketleft egrave udiaeresis dead_abovering udiaeresis"
 xmodmap -e "keycode 35 = bracketright exclam bracketright exclam dead_diaeresis dead_macron dead_diaeresis dead_macron bracketright exclam dead_diaeresis dead_macron"
 xmodmap -e "keycode 48 = braceleft agrave braceleft agrave adiaeresis dead_caron adiaeresis dead_caron braceleft agrave adiaeresis dead_caron"
 xmodmap -e "keycode 51 = braceright dollar braceright dollar dead_tilde dead_breve dead_tilde dead_breve braceright dollar dead_tilde dead_breve"
-# xmodmap -e "keycode 49 = at degree at degree notsign notsign notsign notsign at degree notsign notsign"
-#
+xmodmap -e "keycode 49 = at degree at degree notsign notsign notsign notsign at degree notsign notsign"
+
 # Yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
@@ -109,3 +109,4 @@ eval "$(zoxide init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
