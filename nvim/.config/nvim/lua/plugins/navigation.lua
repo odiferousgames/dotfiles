@@ -46,10 +46,4 @@ return {
 			buffer_leader_key = "M", -- Per Buffer Mappings
 		},
 	},
-	{
-		"ggandor/leap.nvim",
-		config = function()
-			require("leap").create_default_mappings()
-		end,
-	},
 }

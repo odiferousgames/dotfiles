@@ -1,5 +1,12 @@
 return {
-    "shortcuts/no-neck-pain.nvim",
+    {
+        "shortcuts/no-neck-pain.nvim",
+        config = function()
+            require("no-neck-pain").setup({
+                width = 128,
+            })
+        end,
+    },
     {
         "zenbones-theme/zenbones.nvim",
         -- Optionally install Lush. Allows for more configuration or extending the colorscheme
@@ -34,17 +41,17 @@ return {
     },
     {
         "sphamba/smear-cursor.nvim",
-        opts = {                  -- Default  Range
-            stiffness = 0.8,      -- 0.6      [0, 1]
-            trailing_stiffness = 0.5, -- 0.3      [0, 1]
+        opts = {                           -- Default  Range
+            stiffness = 0.8,               -- 0.6      [0, 1]
+            trailing_stiffness = 0.5,      -- 0.3      [0, 1]
             distance_stop_animating = 0.5, -- 0.1      > 0
-            hide_target_hack = false, -- true     boolean
+            hide_target_hack = false,      -- true     boolean
         },
     },
     {
         "rachartier/tiny-inline-diagnostic.nvim",
         event = "VeryLazy", -- Or `LspAttach`
-        priority = 1000, -- needs to be loaded in first
+        priority = 1000,    -- needs to be loaded in first
         config = function()
             require("tiny-inline-diagnostic").setup({
                 preset = "classic",
