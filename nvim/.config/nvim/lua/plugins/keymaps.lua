@@ -44,7 +44,7 @@ return {
 
 			-- Olympe
 			{ "<leader>o", group = "Olympe" },
-			{ "<leader>oc", ":wa<CR> :sil!(cd ~/Documents/olympe/composer;npm run data)<CR>", desc = "Save Composer" },
+			-- { "<leader>oc", ":wa<CR> :sil!(cd ~/Documents/olympe/composer;npm run data)<CR>", desc = "Save Composer" },
 
 			-- LSP
 			{ "<leader>l", group = "LSP" },
